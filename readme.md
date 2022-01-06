@@ -13,4 +13,20 @@
 ### __Description__
 This application is designed to quickly generate a professional README for new projects, that allows busy developers a quick and efficient way to create a README based on the user's input.
 
+---
+#### _Technologies__
+- Javascript
+- NPM
+- Inquirer
 
+---
+#### __References__
+- [NPM](https://docs.npmjs.com/packages-and-modules)
+- [Educative](https://www.educative.io/edpresso/how-to-use-the-inquirer-node-package)
+- [Nodesource](https://nodesource.com/blog/an-absolute-beginners-guide-to-using-npm/)
+- [Javascript Plain English](https://javascript.plainenglish.io/how-to-inquirer-js-c10a4e05ef1f)
+
+---
+#### __Author Info__
+
+[Heather Cooper](https://github.com/cheribc)

@@ -1,12 +1,13 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const util = require('util');
-const inquirer = require('inquirer');
-const generateMarkdown = require('./util/generateMarkdown');
+
+const generateMarkdown = require('./util/generateMarkdown.js');
 
 // Inquirer Questions to prompt user for details of desired README
-inquirer.prompt([
-    {  //CHANGE TO SINGLE QUOTATIONS!!!
+function promptUser(){
+return inquirer.prompt([
+    {  
         type: 'input',
         name: 'title',
         message: 'What is the title of your project?'
@@ -63,13 +64,13 @@ inquirer.prompt([
         type: 'input',
         name: 'questions',
         message: 'Contact me for any questions about this application.',
-    },
+    }
+])
 
-]);
-
+}
 // Function to generate README
-function writeToFile(filename, data) {
-    fs.writeFile(filename, data, (err) =>
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, (err) =>
         err ? console.log(err) : null);
 }
 
@@ -85,6 +86,7 @@ function init() {
         writeToFile('README.md', data);
     })
 };
+
 
 // Function to initialize application
 init();
