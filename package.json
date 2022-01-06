@@ -1,0 +1,22 @@
+{
+  "name": "readme-generator-nodejs",
+  "version": "1.0.0",
+  "description": "This README.md generator is a command-line application that will generate a README.md file with the user's entered input.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cheribc/Readme-Generator-NodeJS.git"
+  },
+  "author": "cheribc",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cheribc/Readme-Generator-NodeJS/issues"
+  },
+  "homepage": "https://github.com/cheribc/Readme-Generator-NodeJS#readme",
+  "dependencies": {
+    "inquirer": "^8.2.0"
+  }
+}
