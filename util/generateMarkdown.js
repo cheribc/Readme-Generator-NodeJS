@@ -1,7 +1,22 @@
 // Create function to generateMarkdown
 
+function licenseBadge(data) {
+const licenseType = data.license[0];
+    let licenseString = ''
+        if (licenseType === 'MIT') {
+        licenseString = `![License: MIT](https://img.shields.io/badge/License-MIT-Yellow.svg)`
+    };
+        if (licenseType === 'Apache') {
+        licenseString = `![License: Apache](https://img.shields.io/badge/License-Apache%202.0-blue.svg)`
+    };
+    if (licenseType === 'GNU') {
+        licenseString = `![License: GNU](https://img.shields.io/badge/License-GPL%20v2-blue.svg)`
+    };
+    return licenseString
+};
+
 function generateMarkdown(answers) {
-    return `
+    return `# ${data.title}
 <h1 align="center">${answers.projectTitle} </h1>
 
 ![badge](https://img.shields.io/badge/license-${answers.license}-brightgreen)<br />
@@ -42,7 +57,7 @@ ${answers.questions}<br />
 <br />
 Email me with questions: ${answers.email}<br /><br />
 
-    `;
+    
 }
 
 module.exports = generateMarkdown;

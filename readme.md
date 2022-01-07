@@ -11,10 +11,12 @@
 
 ---
 ### __Description__
-This application is designed to quickly generate a professional README for new projects, that allows busy developers a quick and efficient way to create a README based on the user's input.
+This application is designed to quickly generate a professional README for new projects, that allows busy developers a quick and efficient way to create a README based on the user's input. I used the Inquirer NPM, Node.js and File System (fs)
+to create simple but proffesional README.md files.
 
 ---
-#### _Technologies__
+---
+#### __Technologies__
 - Javascript
 - NPM
 - Inquirer
@@ -30,3 +32,7 @@ This application is designed to quickly generate a professional README for new p
 #### __Author Info__
 
 [Heather Cooper](https://github.com/cheribc)
+
+---
+#### __License__
+[MIT](https://opensource.org/licenses/MIT)

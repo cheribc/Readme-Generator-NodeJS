@@ -51,21 +51,14 @@ return inquirer.prompt([
         type: 'list',
         name: 'license',
         message: 'What license would you like to use for this project?',
-        choices: [
-            'MIT',
-            'Apache 2.0',
-            'BSD',
-            'GNU',
-            'ISC',
-            'CCO'
-        ]
+        choices: ['MIT','Apache 2.0','GNU'],
     },
     {
         type: 'input',
         name: 'questions',
         message: 'Contact me for any questions about this application.',
-    }
-])
+    },
+]);
 
 }
 // Function to generate README
@@ -76,10 +69,7 @@ function writeToFile(fileName, data) {
 
 // Function to initialize app
 function init() {
-    inquirer
-    .prompt(
-        questions
-    )
+    inquirer.prompt(questions)
     .then((data) => {
         return generateMarkdown(data);
     }).then((data) => {
@@ -87,6 +77,11 @@ function init() {
     })
 };
 
+.then((data) => {
+    return fs.writeFileSync(path.join (process.cwd(), 'READMME.md'));
+});
+
+}
 
 // Function to initialize application
 init();
