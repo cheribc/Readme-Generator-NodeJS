@@ -101,7 +101,7 @@ ${data.testing}
 ## Questions
 ${data.questions}<br />
 <br />
-:octocat: Find me on Github: [${data.username}](https://github.com/${data.username})<br />
+Find me on Github: [${data.username}](https://github.com/${data.username})<br />
 <br />
 Email me with questions: ${data.email}<br /><br />
 `;

@@ -3,18 +3,30 @@
 ---
 ### __Table of Contents__
 
-- [Description](#description)
-- [Installation](#installation)
-- [Technologies](#technologies)
-- [References](#references)
-- [Author Info](#author-info)
+- [README-Generator-NodeJS](#readme-generator-nodejs)
+    - [__Table of Contents__](#table-of-contents)
+    - [__Description__](#description)
+  - [!Project Image](#)
+  - [>Installation in CLI: npm install inquirer](#installation-in-cli-npm-install-inquirer)
+      - [__Technologies__](#technologies)
+      - [__References__](#references)
+      - [__Author Info__](#author-info)
+      - [__License__](#license)
+  
+      - [__Technologies__](#technologies)
+      - [__References__](#references)
+      - [__Author Info__](#author-info)
+      - [__License__](#license)
 
 ---
 ### __Description__
 This application is designed to quickly generate a professional README for new projects, that allows busy developers a quick and efficient way to create a README based on the user's input. I used the Inquirer NPM, Node.js and File System (fs)
-to create simple but proffesional README.md files.
+to create simple but professional README.md files.
 
+
+![Project Image](util/images/README-GEN-Preview.png)
 ---
+>Installation in CLI: npm install inquirer 
 ---
 #### __Technologies__
 - Javascript
