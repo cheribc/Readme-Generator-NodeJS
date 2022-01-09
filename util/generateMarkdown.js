@@ -15,14 +15,14 @@ const licenseType = data.license[0];
     return licenseString
 };
 
-function generateMarkdown(answers) {
+function generateMarkdown(data) {
     return `# ${data.title}
-<h1 align="center">${answers.projectTitle} </h1>
+// <h1 align="center">${data.Title} </h1>
 
 ![badge](https://img.shields.io/badge/license-${answers.license}-brightgreen)<br />
 
 ## Description
-${answers.description}
+${data.description}
 
 ## Table of Contents
 - [Title](#title)
@@ -35,27 +35,27 @@ ${answers.description}
 - [Questions](#questions)
 
 ## Installation
-${answers.installation}
+${data.installation}
 
 ## Usage
-${answers.usage}
+${data.usage}
 
 ## License
-![badge](https://img.shields.io/badge/license-${answers.license}-brightgreen)<br />
-This application is licensed by the ${answers.license} license.
+![badge](https://img.shields.io/badge/license-${data.license}-brightgreen)<br />
+This application is licensed by the ${data.license} license.
 
 ## Contributions
-${answers.contributions}
+${data.contributions}
 
 ## Testing
-${answers.testing}
+${data.testing}
 
 ## Questions
-${answers.questions}<br />
+${data.questions}<br />
 <br />
-:octocat: Find me on Github: [${answers.username}](https://github.com/${answers.username})<br />
+:octocat: Find me on Github: [${data.username}](https://github.com/${data.username})<br />
 <br />
-Email me with questions: ${answers.email}<br /><br />
+Email me with questions: ${data.email}<br /><br />
 
     
 }

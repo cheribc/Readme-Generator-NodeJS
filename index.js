@@ -2,11 +2,19 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const util = require('util');
 
-const generateMarkdown = require('./util/generateMarkdown.js');
+// generateMarkdown dependency to import README 
+const {generateMarkdown} = require('./util/generateMarkdown');
+
+// const generateMarkdown = require('./util/generateMarkdown.js');
+
+const writeFileAsync = util.promisify(fs.writeFile);
 
 // Inquirer Questions to prompt user for details of desired README
-function promptUser(){
-return inquirer.prompt([
+// function promptUser(){
+// return inquirer.prompt([
+
+const questions = () => {
+    inquirer.prompt([
     {  
         type: 'input',
         name: 'title',
@@ -57,31 +65,42 @@ return inquirer.prompt([
         type: 'input',
         name: 'questions',
         message: 'Contact me for any questions about this application.',
-    },
-]);
-
-}
-// Function to generate README
-function writeToFile(fileName, data) {
-    fs.writeFile(fileName, data, (err) =>
-        err ? console.log(err) : null);
-}
-
-// Function to initialize app
-function init() {
-    inquirer.prompt(questions)
-    .then((data) => {
-        return generateMarkdown(data);
-    }).then((data) => {
-        writeToFile('README.md', data);
-    })
+    }
+    ]}.then(answers => {
+        writeToFile(answers)
+        console.log('Successfully wrote to README.md!')
+    }).catch((err) => console.error(err));
 };
 
-.then((data) => {
-    return fs.writeFileSync(path.join (process.cwd(), 'READMME.md'));
-});
-
+const writeToFile = answers => {
+    writeFileAsync('README.md', generateMarkdown(answers))
 }
 
+
+// Function to generate README
+// function writeToFile(fileName, data) {
+//     fs.writeFile(fileName, data, (err) =>
+//         err ? console.log(err) : null);
+// }
+
+// Function to initialize app
+// function init() {
+//     inquirer.prompt(questions)
+//     .then((data) => {
+//         return generateMarkdown(data);
+//     }).then((data) => {
+//         writeToFile('README.md', data);
+//     })
+// };
+
+// .then((data) => {
+//     return fs.writeFileSync(path.join (process.cwd(), 'READMME.md'));
+// });
+
+// }
+questions();
 // Function to initialize application
 init();
+
+// Exports
+module.exports = questions;
