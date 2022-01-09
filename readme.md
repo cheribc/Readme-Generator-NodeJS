@@ -6,7 +6,7 @@
 - [README-Generator-NodeJS](#readme-generator-nodejs)
     - [__Table of Contents__](#table-of-contents)
     - [__Description__](#description)
-  - [!Project Image](#)
+  - [!Demo video](#)
   - [>Installation in CLI: npm install inquirer](#installation-in-cli-npm-install-inquirer)
       - [__Technologies__](#technologies)
       - [__References__](#references)
@@ -25,6 +25,7 @@ to create simple but professional README.md files.
 
 
 ![Project Image](util/images/README-GEN-Preview.png)
+![Demo video](util/README-Generator-DemoVideo.mov)
 ---
 >Installation in CLI: npm install inquirer 
 ---
